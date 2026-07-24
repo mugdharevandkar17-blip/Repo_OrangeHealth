@@ -18,6 +18,7 @@ import org.testng.xml.XmlTest;
 
 public class BaseClassTest {
 	WebDriver driver;
+	public static WebDriver sdriver;
 	@BeforeSuite
 	public void configBS() {
 		System.out.println("DB coonection created");
@@ -54,6 +55,7 @@ public class BaseClassTest {
 			throw new IllegalArgumentException("Invalid browser : " + browser);
 		}
 		
+		sdriver = driver;
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.get("https://www.orangehealth.in/");
