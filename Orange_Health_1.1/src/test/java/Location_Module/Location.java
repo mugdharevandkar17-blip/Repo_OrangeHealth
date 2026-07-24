@@ -1,7 +1,7 @@
 package Location_Module;
 
-import com.ty.orangehealth.Generic_Utility.FileUtility;
-import com.ty.orangehealth.Generic_Utility.JavaUtility;
+import com.ty.orangehealth.generic_utility.FileUtility;
+import com.ty.orangehealth.generic_utility.JavaUtility;
 
 public class Location 
 {

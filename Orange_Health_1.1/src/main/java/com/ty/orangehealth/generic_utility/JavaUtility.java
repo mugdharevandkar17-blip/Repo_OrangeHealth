@@ -1,4 +1,4 @@
-package com.ty.orangehealth.Generic_Utility;
+package com.ty.orangehealth.generic_utility;
 
 import java.time.LocalDate;
 import java.util.Random;
