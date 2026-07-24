@@ -14,7 +14,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.ty.orangehealth.WebdriverUtility.UtilityClassObject;
+import com.ty.orangehealth.Generic_Utility.ThreadSafeClass;
 import com.ty.orangehealth.business_utility.BaseClassTest;
 
 
@@ -43,11 +43,11 @@ public class ListenerImp implements ITestListener,ISuiteListener{
   public void OnTestStart(ITestResult result) {
 		System.out.println("====="+result.getMethod().getMethodName()+"====START=====");
 		test=report.createTest(result.getMethod().getMethodName());
-		UtilityClassObject.setTest(test);
-		UtilityClassObject.getTest().log(Status.INFO, "Test Case got started");  
+		ThreadSafeClass.setTest(test);
+		ThreadSafeClass.getTest().log(Status.INFO, "Test Case got started");  
   }
   public void onTestFailure(ITestResult result) {
-		UtilityClassObject.getTest().log(Status.FAIL, "Status got failed");
+	    ThreadSafeClass.getTest().log(Status.FAIL, "Status got failed");
 		String testName = result.getMethod().getMethodName();
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
 		TakesScreenshot tks=(TakesScreenshot)BaseClassTest.sdriver;
