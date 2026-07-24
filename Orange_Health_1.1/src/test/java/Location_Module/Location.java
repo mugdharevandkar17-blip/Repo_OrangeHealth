@@ -1,6 +1,7 @@
 package Location_Module;
 
 import com.ty.orangehealth.Generic_Utility.FileUtility;
+import com.ty.orangehealth.Generic_Utility.JavaUtility;
 
 public class Location 
 {
@@ -14,6 +15,10 @@ public class Location
 		double num = Double.parseDouble(data1);
 		System.out.println(num);
 		
+		JavaUtility ju=new JavaUtility();
+		System.out.println(ju.getSysDate());
+		System.out.println(ju.getRandomNumber());
+				
 	}
 
 }
